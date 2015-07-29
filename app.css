@@ -13,22 +13,16 @@ body {
 body {
   font-family: Sans-serif, Helvetica Neue, Arial, Helvetica;
   color: #4D4D4D;
-}
-.color__scheme {
-
-}
-.color__schemes {
-  display: inline-block;
-  list-style-type: none;
+  margin: 0;
 }
 .palette__section {
   text-align: center;
-
 }
 .palette__color {
   display: inline-block;
   height: 250px;
   width: 20%;
+  padding: 0;
 }
 .palette__title {
   text-decoration: underline;
@@ -36,4 +30,16 @@ body {
 }
 .palette__keyword {
   text-transform: uppercase;
+}
+.color__span {
+  position: relative;
+  right: 0;
+  top: 50%;
+  color: #fff;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-shadow: -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                 1px 1px 0 #000;
 }

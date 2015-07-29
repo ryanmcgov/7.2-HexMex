@@ -46,11 +46,15 @@
       
       for(i = 0; i < artsyThings.length; i++) {
         p = palette.colors[artsyThings[i]];
-        var hexDiv = document.createElement('div');
-        hexDiv.className = 'palette__color';
-        hexDiv.style.background = p;
-        hexDiv.innerHTML = '&nbsp;'
-        paletteDiv.appendChild(hexDiv);
+         console.log(p);
+        var colorDiv = document.createElement('div');
+        colorDiv.className = 'palette__color';
+        colorDiv.style.background = p;
+        var colorSpan = document.createElement('span');
+        colorSpan.className = 'color__span';
+        colorSpan.innerText = p;
+        colorDiv.appendChild(colorSpan);
+        paletteDiv.appendChild(colorDiv);
       };
     });
     document.body.insertBefore(allPalettes, document.body.childNodes[0]);
