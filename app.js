@@ -1,7 +1,7 @@
 ;(function() {
 
   var getJSON = function(url, callback) {
-    var request = new XMLHttpRequest;
+    request = new XMLHttpRequest;
     request.open('GET', url);
     request.onload = callback;
     request.send();
@@ -24,29 +24,34 @@
     "pop"
   ];
 
-  var renderPalettes = function(e) {
-    var palettes = JSON.parse(e.target.responseText);
+  var renderPalettes = function() {
+    sessionStorage["palettes"] = request.responseText;
+    var palettes = JSON.parse(sessionStorage["palettes"]);
+
     var allPalettes = document.createElement('div');
     allPalettes.className = "allPalettes";
 
     palettes.forEach( function(palette){
       var paletteDiv = document.createElement('div');
       paletteDiv.className = "palette__section";
+
       var title = document.createElement('h3');
       title.className = "palette__title";
       title.innerText = palette.title;
+
       paletteDiv.appendChild(title);
-      var keyword = document.createElement('p');
-      keyword.className = "palette__keyword";
-      keyword.innerText = palette.keyword;
-      paletteDiv.appendChild(keyword);
+
+      var category = document.createElement('p');
+      category.className = "palette__category";
+      category.innerText = palette.category;
+
+      paletteDiv.appendChild(category);
       allPalettes.appendChild(paletteDiv);
 
       var p = new Palette();
       
       for(i = 0; i < artsyThings.length; i++) {
         p = palette.colors[artsyThings[i]];
-          console.log(p);
 
         var h = artsyThings[i];
          
@@ -67,6 +72,7 @@
         paletteDiv.appendChild(colorDiv);
       };
     });
+
     document.body.insertBefore(allPalettes, document.body.childNodes[0]);
   };
 
