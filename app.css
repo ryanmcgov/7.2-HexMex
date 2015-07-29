@@ -11,7 +11,7 @@ body {
   box-sizing: inherit;
 }
 body {
-  font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+  font-family: Sans-serif, Helvetica Neue, Arial, Helvetica;
   color: #4D4D4D;
 }
 .color__scheme {
@@ -20,4 +20,20 @@ body {
 .color__schemes {
   display: inline-block;
   list-style-type: none;
+}
+.palette__section {
+  text-align: center;
+
+}
+.palette__color {
+  display: inline-block;
+  height: 250px;
+  width: 20%;
+}
+.palette__title {
+  text-decoration: underline;
+  font-size: 1.5em;
+}
+.palette__keyword {
+  text-transform: uppercase;
 }

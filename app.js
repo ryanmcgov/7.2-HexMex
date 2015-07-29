@@ -27,7 +27,7 @@
   var renderPalettes = function(e) {
     var palettes = JSON.parse(e.target.responseText);
     var allPalettes = document.createElement('div');
-    allPalettes.className = "palettes__group";
+    allPalettes.className = "allPalettes";
 
     palettes.forEach(function(palette){
       var paletteDiv = document.createElement('div');
@@ -47,9 +47,9 @@
       for(i = 0; i < artsyThings.length; i++) {
         p = palette.colors[artsyThings[i]];
         var hexDiv = document.createElement('div');
-        hexDiv.className = 'palette__hex';
+        hexDiv.className = 'palette__color';
         hexDiv.style.background = p;
-        // hexDiv.innerHTML = '&nbsp;'
+        hexDiv.innerHTML = '&nbsp;'
         paletteDiv.appendChild(hexDiv);
       };
     });
