@@ -15,6 +15,14 @@ body {
   color: #4D4D4D;
   margin: 0;
 }
+.all__palettes {
+  background: url('/images/bridge.jpg');
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 .palette__section {
   
 }
@@ -25,13 +33,31 @@ body {
   padding: 0;
 }
 .palette__title {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.palette__link {
   text-decoration: underline;
   font-size: 1.5em;
+  color: #202020;
   text-align: center;
+
 }
-.palette__keyword {
+.palette__link:hover {
+  text-shadow: -1px -1px 0 #FFF,
+                1px -1px 0 #FFF,
+                -1px 1px 0 #FFF,
+                 1px 1px 0 #FFF;
+}
+.palette__category {
   text-transform: uppercase;
   text-align: center;
+  color: #1253A4;
+  text-shadow: -1px -1px 0 #FFF,
+                1px -1px 0 #FFF,
+                -1px 1px 0 #FFF,
+                 1px 1px 0 #FFF;
 }
 .color__span {
   position: relative;

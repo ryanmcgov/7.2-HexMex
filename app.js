@@ -25,21 +25,26 @@
   ];
 
   var renderPalettes = function() {
-    sessionStorage["palettes"] = request.responseText;
-    var palettes = JSON.parse(sessionStorage["palettes"]);
+    localStorage["palettes"] = request.responseText;
+    var palettes = JSON.parse(localStorage["palettes"]);
 
     var allPalettes = document.createElement('div');
-    allPalettes.className = "allPalettes";
+    allPalettes.className = "all__palettes";
 
     palettes.forEach( function(palette){
       var paletteDiv = document.createElement('div');
       paletteDiv.className = "palette__section";
 
+      var goToPalette = document.createElement('a');
+      goToPalette.setAttribute('href', '/' + palette.id);
+      goToPalette.className = 'palette__link';
+
       var title = document.createElement('h3');
       title.className = "palette__title";
-      title.innerText = palette.title;
+      goToPalette.appendChild(title);
 
-      paletteDiv.appendChild(title);
+      title.innerText = palette.title;
+      paletteDiv.appendChild(goToPalette);
 
       var category = document.createElement('p');
       category.className = "palette__category";
@@ -59,16 +64,21 @@
         colorDiv.className = 'palette__color';
         colorDiv.style.background = p;
 
-        var colorSpan = document.createElement('span');
-        colorSpan.className = 'color__span';
-        colorSpan.innerText = p;
+        // var colorSpan = document.createElement('span');
+        // colorSpan.className = 'color__span';
+        // // var goToPalette = document.createElement('a');
+        // // goToPalette.setAttribute('href', '/' + palette.id);
+        // // goToPalette.className = 'palette__link';
+        
+        // // goToPalette.innerText = p;
+        // colorSpan.innerText = p;
 
-        var artsyThing = document.createElement('span');
-        artsyThing.className = 'artsy__span';
-        artsyThing.innerText = h;
+        // var artsyThing = document.createElement('span');
+        // artsyThing.className = 'artsy__span';
+        // artsyThing.innerText = h;
 
-        colorDiv.appendChild(colorSpan);
-        colorDiv.appendChild(artsyThing);
+        // colorDiv.appendChild(colorSpan);
+        // colorDiv.appendChild(artsyThing);
         paletteDiv.appendChild(colorDiv);
       };
     });
