@@ -16,7 +16,7 @@ body {
   margin: 0;
 }
 .palette__section {
-  text-align: center;
+  
 }
 .palette__color {
   display: inline-block;
@@ -27,17 +27,28 @@ body {
 .palette__title {
   text-decoration: underline;
   font-size: 1.5em;
+  text-align: center;
 }
 .palette__keyword {
   text-transform: uppercase;
+  text-align: center;
 }
 .color__span {
   position: relative;
-  right: 0;
-  top: 50%;
+  left: 5px;
+  top: 5px;
   color: #fff;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+  margin: 5px auto;
+  text-shadow: -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                 1px 1px 0 #000;
+}
+.artsy__span {
+  position: relative;
+  top: 230px;
+  right: 50px;
+  color: #fff;
   text-shadow: -1px -1px 0 #000,
                 1px -1px 0 #000,
                 -1px 1px 0 #000,

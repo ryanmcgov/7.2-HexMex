@@ -29,7 +29,7 @@
     var allPalettes = document.createElement('div');
     allPalettes.className = "allPalettes";
 
-    palettes.forEach(function(palette){
+    palettes.forEach( function(palette){
       var paletteDiv = document.createElement('div');
       paletteDiv.className = "palette__section";
       var title = document.createElement('h3');
@@ -46,14 +46,24 @@
       
       for(i = 0; i < artsyThings.length; i++) {
         p = palette.colors[artsyThings[i]];
-         console.log(p);
+          console.log(p);
+
+        var h = artsyThings[i];
+         
         var colorDiv = document.createElement('div');
         colorDiv.className = 'palette__color';
         colorDiv.style.background = p;
+
         var colorSpan = document.createElement('span');
         colorSpan.className = 'color__span';
         colorSpan.innerText = p;
+
+        var artsyThing = document.createElement('span');
+        artsyThing.className = 'artsy__span';
+        artsyThing.innerText = h;
+
         colorDiv.appendChild(colorSpan);
+        colorDiv.appendChild(artsyThing);
         paletteDiv.appendChild(colorDiv);
       };
     });
