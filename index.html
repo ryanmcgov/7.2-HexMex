@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HexMex Palettes</title>
+    <link rel="stylesheet" type="text/css" href="app.css">
+  </head>
+  <body>
+    <div>
+      <header class="color__sheme">
+        <ul>
+          <li>dominant</li>
+          <li>contrasting dominant</li>
+          <li>sub-dominant</li>
+          <li>contrasting sub-dominant</li>
+          <li>pop (aka call-to-action)</li>
+        </ul>
+      </header>
+      <div class="palettes">
+        <ul>
+          <li class="single__palette">
+            <ul>
+              <span class="palette__title"></span>
+              <span class="palette__keyword"></span>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function() {
+        var script = document.createElement('script');
+        script.src = 'app.js';
+        document.body.appendChild(script);
+      });
+    </script>
+
+  </body>
+</html>
