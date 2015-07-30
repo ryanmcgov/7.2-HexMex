@@ -1,0 +1,83 @@
+html {
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 14px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-family: Sans-serif, Helvetica Neue, Arial, Helvetica;
+  color: #4D4D4D;
+  margin: 0;
+}
+.all__palettes {
+  background: url('/images/bridge.jpg');
+  min-height: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.palette__section {
+  
+}
+.palette__color {
+  display: inline-block;
+  height: 250px;
+  width: 20%;
+  padding: 0;
+}
+.palette__title {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.palette__link {
+  text-decoration: underline;
+  font-size: 1.5em;
+  color: #202020;
+  text-align: center;
+  width: auto;
+
+}
+.palette__link:hover {
+  text-shadow: -1px -1px 0 #FFF,
+                1px -1px 0 #FFF,
+                -1px 1px 0 #FFF,
+                 1px 1px 0 #FFF;
+}
+.palette__category {
+  text-transform: uppercase;
+  text-align: center;
+  color: #1253A4;
+  text-shadow: -1px -1px 0 #FFF,
+                1px -1px 0 #FFF,
+                -1px 1px 0 #FFF,
+                 1px 1px 0 #FFF;
+}
+.color__span {
+  position: relative;
+  left: 5px;
+  top: 5px;
+  color: #fff;
+  margin: 5px auto;
+  text-shadow: -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                 1px 1px 0 #000;
+}
+.artsy__span {
+  position: relative;
+  top: 230px;
+  right: 50px;
+  color: #fff;
+  text-shadow: -1px -1px 0 #000,
+                1px -1px 0 #000,
+                -1px 1px 0 #000,
+                 1px 1px 0 #000;
+}
