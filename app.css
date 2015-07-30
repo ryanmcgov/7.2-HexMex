@@ -42,6 +42,7 @@ body {
   font-size: 1.5em;
   color: #202020;
   text-align: center;
+  width: auto;
 
 }
 .palette__link:hover {

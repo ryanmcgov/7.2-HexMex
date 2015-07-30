@@ -41,10 +41,10 @@
 
       var title = document.createElement('h3');
       title.className = "palette__title";
-      goToPalette.appendChild(title);
+      title.appendChild(goToPalette);
 
-      title.innerText = palette.title;
-      paletteDiv.appendChild(goToPalette);
+      goToPalette.innerText = palette.title;
+      paletteDiv.appendChild(title);
 
       var category = document.createElement('p');
       category.className = "palette__category";
@@ -64,21 +64,7 @@
         colorDiv.className = 'palette__color';
         colorDiv.style.background = p;
 
-        // var colorSpan = document.createElement('span');
-        // colorSpan.className = 'color__span';
-        // // var goToPalette = document.createElement('a');
-        // // goToPalette.setAttribute('href', '/' + palette.id);
-        // // goToPalette.className = 'palette__link';
         
-        // // goToPalette.innerText = p;
-        // colorSpan.innerText = p;
-
-        // var artsyThing = document.createElement('span');
-        // artsyThing.className = 'artsy__span';
-        // artsyThing.innerText = h;
-
-        // colorDiv.appendChild(colorSpan);
-        // colorDiv.appendChild(artsyThing);
         paletteDiv.appendChild(colorDiv);
       };
     });
